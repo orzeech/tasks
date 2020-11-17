@@ -1,0 +1,12 @@
+Tutaj napiszemy sobie cokolwiek.
+Na przykład tresc jakiegos zadania.
+
+adanie 16
+Ścigamy się! Dziś umieszczę w repozytorium klasę abstrakcyjną RaceCar która będzie miała 4 pola klas. Engine, Transmission, Brakes oraz Tyres. Napiszę Wam po kilka implementacji każdego z tych interfejsów.
+SIlnik im większy tym większa prędkość maksymalna, ale cięższy więc niektóre będą miały “karę” do przyspieszenia
+Skrzynia biegów im mniejsze przełożenie tym większe przyspieszenie, ale mniejsza prędkość maksymalna
+Hamulce lepsze hamują lepiej, ale się szybciej zużywają. Za każde zużyte hamulcje doliczamy XXX (będize podana) sekund do całego wyścigu
+Różne opony pozwalają z różną prędkością wchodzić w zakręt i mają swoją wytrzymałość (wytrzymują tylko YYY zakrętów)
+Będziecie mieli tylko jedną metodę do zaimplementowania abstract void prepareForRace(List<Integer> track), gdzie track jest listą długości prostych odcinków na trasie. Np. Lista [400, 1000, 60, 40, 1000] oznacza że samochód startuje, jedzie 400m po prostej, musi wyhamować do prędkości granicznej opon, potem jedzie 1000m po prostej, hamuje, skręca, jedzie 60m, hamuje, skręca itd. Wewnątrz tej metody jedyne co musicie zrobić to ustawić implementacje interfejsów czyli wybrać silnik, skrzynie, hamulce i opony pod ten wyścig.
+Swój samochód nazwijcie IMIERaceCar zebym wiedzial co jest czyje. Przygotuję kilkanaście różnych torów wyścigowych (np. taki bez zakrętów, taki z samymi zakrętami co 2 metry, taki “normalny” jak powyżej) i napiszę Wam, czyje auto poradziło sobie najlepiej.
+Napiszę Wam przykładową implementację mojego samochodu, żebyśccie wiedzieli o co mi chodzi. Mam nadzieję, że takie zadanie jest bardzo ciekawe
