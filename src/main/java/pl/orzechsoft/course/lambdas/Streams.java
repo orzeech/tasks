@@ -10,7 +10,20 @@ import java.util.stream.Collectors;
 public class Streams {
 
   public static void main(String[] args) {
-    List<String> names = List.of("Marcin", "Adam", "Agata", "Anna", "Mateusz", "Wojtek");
+    List<String> names = List
+        .of("Marcin", "Adam", "Agata", "Anna", "Mateusz", "Wojtek", "Kasia", "Tomek", "Kamil",
+            "Maria", "Arkadiusz", "Przemysław", "Horacy", "Zofia", "Genowefa", "Serafin");
+    List<Integer> list = List
+        .of(4532, 321312, 34, 324, 2, 341, 32, 124, 324, 345, 34, 3, 213, 12, 4324, 53, 46, 456,
+            546, 2, 421, 21, 321, 321, 3);
+
+    List<Person> persons = names.stream().map(name -> new Person(name, 15))
+        .filter(person -> !person.getName().contains("e"))
+        .collect(Collectors.toList());
+    persons.forEach(person -> System.out
+        .println(person.getName() + " will be adult in " + (18 - person.getAge()) + " years"));
+
+    System.out.println(list.stream().mapToLong(Integer::longValue).sum());
 
     // Operacje konczace stream: forEach, collect
     // Operacje nie konczace streamu: filter, map
